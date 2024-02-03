@@ -15,8 +15,60 @@
 
 
         <div class = "contents">
-        <h1>Include Sneha Code to write letter</h1>
+            <br>
+            <p>We've made it super easy. Just enter your information below, then click the button to generate a personalized script!</p>
+        
+            <div class="scriptQues">
+              <div class="scriptItem">
+                <label for="yourName">Your First Name: </label>
+                <input type="text" id="name" >
+              </div>
+        
+              <div class="scriptItem">
+                <label for="yourLocation">Your District, County, or City: </label>
+                <input type="text" id="location" >
+              </div>
+        
+              <div class="scriptItem">
+                <label for="yourLearning">Share 1-2 impacts of this decision or your opinion on the topic: </label>
+                <br/>
+                <input type="text" id="learning" >
+              </div>
+        
+              <button id="scriptBtn">Generate Script</button>
+        
+            </div>
+        
+            <br/>
+        
+                <p id="scriptReturned"> 
+                </p>
+            <br/>
         </div>
+
+        <script>
+            var displayScript = document.getElementById("scriptReturned");
+            var scriptBtn = document.getElementById("scriptBtn");
+
+            if (scriptBtn) {
+            scriptBtn.addEventListener("click", generateScript);
+            }
+
+            /*
+            REFACTOR ITEM 2: 
+            Create a separate function for displaying the script.
+            */
+
+            function generateScript() {
+            //This variable must be in the function or it will not work
+            var name = document.getElementById("name").value;
+            var location = document.getElementById("location").value;
+            var learning = document.getElementById("learning").value;
+
+            displayScript.innerHTML = "Hello, my name is " + name + " and I live in " + location + ". I am calling to speak to you about the recent court decision Roe vs Wade which has banned abortion in several states and affected women worldwide. This means nearly half of all women of reproductive age — 36 million women, and even more transgender and nonbinary people that could need an abortion — could lose access to safe, legal abortion in the United States. As a citizen of the United States, this decision affects the safety of me and those around me. For example, " + learning + ". It is time to support abortion access in all communities, and to support policies that increase access to abortion, rather than decimating people’s most basic rights state by state." ;
+            }
+
+                    </script>
     </body>
 
 </html>
