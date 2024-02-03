@@ -83,6 +83,12 @@
             // Display the generated script based on the selected template
             if (selectedTemplate in scriptTemplates) {
                 displayScript.textContent = scriptTemplates[selectedTemplate];
+                const generatedScript = scriptTemplates[selectedTemplate];
+                const generatedSubject = selectedTemplate;
+                const mailtoWhere = `mailto:?subject=${encodeURIComponent(generatedSubject)} Opinion &body=${encodeURIComponent(generatedScript)}`;
+
+                window.location.href = mailtoWhere;
+
             } else {
                 displayScript.textContent = "Selected template not found.";
             }
