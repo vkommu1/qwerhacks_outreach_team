@@ -7,10 +7,22 @@
 
       <!-- link the webpage's stylesheet -->
       <link rel="stylesheet" href="/propstyle.css" />
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
 
     </head>
 
     <body>
+        <div id = "nav-placeholder">    
+        </div>
+        <script>
+           $(function(){
+            $("#nav-placeholder").load("directory.html");
+           })
+        </script>
+
+        
+        <h1> Learn about the propositions here</h1>
         <button onclick="goToProp1()"> 1</button>
         <button onclick="goToProp2()"> 2</button>
         <button onclick="goToProp3()"> 3</button>
@@ -23,19 +35,19 @@
             window.location.href = 'prop1.html';
         }
         function goToProp2() {
-            window.location.href = 'prop1.html';
+            window.location.href = 'prop2.html';
         }
         function goToProp3() {
-            window.location.href = 'prop1.html';
+            window.location.href = 'prop3.html';
         }
         function goToProp4() {
-            window.location.href = 'prop1.html';
+            window.location.href = 'prop4.html';
         }
         function goToProp5() {
-            window.location.href = 'prop1.html';
+            window.location.href = 'prop5.html';
         }
         function goToProp6() {
-            window.location.href = 'prop1.html';
+            window.location.href = 'prop6.html';
         }
     </script>
 
