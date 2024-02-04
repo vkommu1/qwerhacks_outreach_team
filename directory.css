@@ -1,0 +1,63 @@
+/* Reset default styles for body and buttons */
+#unique-container body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+#unique-container button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    font-family: "Arial", sans-serif; /* Better font */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 18px; /* Increase the font size */
+    position: relative;
+}
+
+/* Style the navbar */
+#unique-container .navbar {
+    background-color: #980B29;
+    padding: 10px;
+    text-align: right;
+}
+
+/* Style the buttons */
+#unique-container .buttons {
+    display: inline-block;
+}
+
+#unique-container .buttons button {
+    background: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Underline effect */
+#unique-container .buttons button::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0; /* Start the underline from the left side */
+    transition: width 0.4s ease; /* Slower transition */
+}
+
+/* Hover effect */
+#unique-container .buttons button:hover::before {
+    width: 100%;
+    transition: width 0.4s ease; /* Slower transition */
+}
+
+/* Sliding underline on hover */
+#unique-container .buttons button:hover {
+    color: #FAE1C3; /* Change text color on hover */
+}
