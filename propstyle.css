@@ -136,8 +136,6 @@ line-height: 65px;
 text-align: center;
 
 color: #FFFFFF;
-
-
 }
 
 .koulen-regular {
@@ -145,3 +143,15 @@ color: #FFFFFF;
     font-weight: 400;
     font-style: normal;
   }
+
+.bill 
+{
+/* 5b940cd2-00ec-4717-a7fc-e056ff3c8000 2 */
+
+position: absolute;
+width: 400px;
+height: 400px;
+left: 500px;
+top: 400px;
+
+}
