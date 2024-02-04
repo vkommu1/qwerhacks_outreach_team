@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
     <head>
       <!-- link the webpage's stylesheet -->
@@ -6,7 +7,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&display=swap" rel="stylesheet">
       <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
-
+    
     <body>
         <div id = "nav-placeholder">    
         </div>
@@ -15,14 +16,28 @@
             $("#nav-placeholder").load("directory.html");
            })
         </script>
-        
-        <div class = "content">
-          <h1 class = "title">Proposition 1</h1>
-          <h2 class = "about_header">What is Proposition 1?</h2>
-          <h3 class = "description">Proposition 1 is about...</h3>
-          <h2 class = "pros_header">Pros and Cons</h2>
-          <h3 class = "pros_and_cons">Pros of Proposition 1 include...</h3>
-        </div>
+
+       
+        <button class = "vote_button_pro" onclick="redirectGetStarted()">
+          <div class = "text_pro">Pros</div>
+        </button>
+
+        <button class = "vote_button_con" onclick="redirectGetStarted()">
+          <div class = "text_con">Cons</div>
+        </button>
+
+        <button class = "vote_button_info" onclick="redirectGetStarted()">
+          <div class = "text_info_main">Main</div>
+          <div class = "text_info_points">Points</div>
+        </button>
+
+        <script>
+            function redirectHome()
+            {
+                window.location.href = 'homepage.html';
+            }
+        </script>
+      
     </body>
 
 </html>
