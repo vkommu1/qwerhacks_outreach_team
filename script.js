@@ -1,5 +1,5 @@
 // script.js
-const apiKey = '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'; // Replace with your actual API key
+const apiKey = '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'; // Replace with your actual API key
 const apiUrl = 'https://api.openai.com/v1/chat//completions';
 
 document.getElementById('send-button').addEventListener('click', async () => {
