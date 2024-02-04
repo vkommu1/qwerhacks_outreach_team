@@ -6,21 +6,13 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
       <!-- link the webpage's stylesheet -->
-      <link rel="stylesheet" href="/propstyle.css" />
+      <link rel="stylesheet" href="/proposition.css" />
       <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
+        
       <style>
-        .button{
-            float: left;
-        }
-        .button button {
-            background-color: transparent;
-            color: transparent;
-            border: 0px;
-            border-width: 0cap;
-        }
         body{
             background: url(images/Learn\ about\ P.png);
+            background-attachment: fixed;
             height: 100vh;
             margin: 0;
             overflow: hidden;
@@ -30,23 +22,45 @@
 
         }
 
+        .fly{
+            position: absolute;
+            right: -500px; /* Initially position outside the viewport on the right */
+            top: 10%; /* Adjust as needed */
+            animation-name: fly;
+            animation-duration: 15s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes fly{
+            from {right: -500px;} 
+            to {right: 1500px;}
+        }
       </style>
 
-
     </head>
+    
 
 
     <body>
-        <div id = "nav-placeholder">    
-        </div>
+        <div id = "nav-placeholder">    </div>
         <script>
            $(function(){
             $("#nav-placeholder").load("directory.html");
            })
         </script>
 
+
         
-        <h1 class="title1"></h1>
+
+        
+        
+        <div class = "fly">
+        <div class = "plane-container"> 
+            <img class= "plane" src="images/plane.png" alt="Plane" width = "600" height = "300">
+        </div>
+    </div>
+
         <div class="button">
             <button onclick="goToProp1()"> 
                 <img src="images/Prop1.png" alt="Image 1" width = "100" height = "150">
