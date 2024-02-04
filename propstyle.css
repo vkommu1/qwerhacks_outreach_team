@@ -257,6 +257,25 @@ color: #044389;
     transform: translateY(20px); /* Move the image down by 20 pixels on hover */
 }
 
+.title_nav
+{
+width: 250px;
+height: 57px;
+left: 600px;
+top: 60px;
+
+position: relative;
+font-family: 'Koulen';
+font-style: normal;
+font-weight: 400;
+font-size: 90px;
+line-height: 12px;
+text-align: center;
+
+opacity: 1;
+
+color: #044389;
+}
 
 
 
