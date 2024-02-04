@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-3 Email Prompt</title>
+</head>
+<body>
+    <div>
+        <label for="user-prompt">Enter your prompt:</label>
+        <input type="text" id="user-prompt" placeholder="Type your prompt here">
+        <button id="generate-button">Generate</button>
+    </div>
+    <div id="response-container">
+        <!--Display the Response Here-->
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const apiKey = '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'; 
+        const apiUrl = 'https://api.openai.com/v1/chat/completions';
+
+        const generateButton = document.getElementById('generate-button');
+        const userPromptInput = document.getElementById('user-prompt');
+        const responseContainer = document.getElementById('response-container');
+
+        generateButton.addEventListener('click', function () {
+            const userPrompt = userPromptInput.value;
+
+            // Send a request to GPT
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'Bearer ' + apiKey,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    "model": "gpt-3.5-turbo",
+                    "messages": [
+                    {
+                        "role": "system",
+                        "content": "You are a helpful assistant pelican that is knowledgable about government."
+                    },
+                    {
+                        "role": "user",
+                        "content": userPrompt
+                    }
+                    ],
+                    max_tokens: 300 
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.choices && data.choices.length > 0) {
+                    const gpt3Response = data.choices[0].message.content;
+                    console.log(gpt3Response)
+                    responseContainer.innerHTML = `<p><strong>Bill Says!:</strong></p><p>${gpt3Response}</p>`;
+                } else {
+                    throw new Error('Empty response from Bill');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error.message);
+                responseContainer.innerHTML = `<p><strong>Error:</strong> ${error.message}</p>`;
+            });
+        });
+    });
+
+
+    </script>
+</body>
+</html>
