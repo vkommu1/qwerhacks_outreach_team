@@ -11,7 +11,7 @@
     background: none;
     cursor: pointer;
     outline: none;
-    font-family: "Arial", sans-serif; /* Better font */
+    font-family: "Koulen", sans-serif; /* Better font */
     transition: background-color 0.3s ease, color 0.3s ease;
     font-size: 18px; /* Increase the font size */
     position: relative;
