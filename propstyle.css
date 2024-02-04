@@ -25,17 +25,17 @@ box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 .vote_button_pro:hover {
     transform: scale(3.8); /* Scale the circle on hover */
     background: #FF3737;
-    z-index: 1; 
+    z-index: 2; 
 }
 
 .text_pro
 {
 /* Pros */
-
+position: absolute;
 width: 160px;
 height: 65px;
-left: 291px;
-top: 300px;
+left: 10px;
+top: 60px;
 
 font-family: 'Koulen';
 font-style: normal;
@@ -45,6 +45,7 @@ line-height: 65px;
 text-align: center;
 
 color: #FF3737;
+z-index: 2;
 }
 
 .vote_button_pro:hover .text_pro {
@@ -72,7 +73,7 @@ box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 .vote_button_con:hover {
     transform: scale(3.8); /* Scale the circle on hover */
     background: #FFFFFF;
-    z-index: 1; 
+    z-index: 2; 
 }
 
 .vote_button_con:hover .text_con {
@@ -82,11 +83,11 @@ box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 .text_con
 {
  /* Cons */
-
+ position: absolute;
 width: 160px;
 height: 72px;
-left: 769px;
-top: 294px;
+left: 15px;
+top: 60px;
 
 font-family: 'Koulen';
 font-style: normal;
@@ -96,6 +97,7 @@ line-height: 65px;
 text-align: center;
 
 color: #FF3737;
+z-index: 2;
 
 }
 
@@ -184,21 +186,26 @@ color: #FFFFFF;
 {
 /* 5b940cd2-00ec-4717-a7fc-e056ff3c8000 2 */
 
-position: relative;
+position: absolute;
 width: 400px;
 height: 400px;
 left: -150px;
-top: 50px;
+top: 200px;
 z-index: 1; 
 }
 
 .vote_button_info:hover .text_info_list
 {
-position: relative;
+    width: 135px;
+    height: 400px;
+    left: 23px;
+    top: 30px;
+    list-style-position: outside;
+position: absolute;
 font-family: 'Koulen';
 font-style: normal;
-font-weight: 400;
-font-size: 10px;
+font-weight: 100;
+font-size: 9px;
 line-height: 12px;
 text-align: center;
 
@@ -207,32 +214,44 @@ opacity: 1;
 color: #FFFFFF;
 z-index: 10000; 
 
+
 }
 
 .vote_button_pro:hover .text_pro_list
 {
-    position: relative;
+    width: 130px;
+    height: 400px;
+    left: 23px;
+    top: 30px;
+    list-style-position: outside;
+position: absolute;
 font-family: 'Koulen';
 font-style: normal;
 font-weight: 400;
-font-size: 10px;
-line-height: 12px;
+font-size: 8px;
+line-height: 10px;
 text-align: center;
 
 opacity: 1;
 
-color: #044389;
+color: #FFFFFF;
 }
 
 .vote_button_con:hover .text_con_list
 {
-    position: relative;
+    width: 130px;
+    height: 400px;
+    left: 23px;
+    top: 25px;
+    list-style-position: outside;
+position: absolute;
     font-family: 'Koulen';
     font-style: normal;
     font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 8px;
+    line-height: 9px;
     text-align: center;
+    list-style-position: outside;
 
 opacity: 1;
 
@@ -254,6 +273,12 @@ color: #044389;
 
 
 .vote_button_info:hover .bill {
+    transform: translateY(20px); /* Move the image down by 20 pixels on hover */
+}
+.vote_button_pro:hover .bill {
+    transform: translateY(20px); /* Move the image down by 20 pixels on hover */
+}
+.vote_button_con:hover .bill {
     transform: translateY(20px); /* Move the image down by 20 pixels on hover */
 }
 
