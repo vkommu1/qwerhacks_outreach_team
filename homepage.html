@@ -3,17 +3,44 @@
     <head>
         <link rel="stylesheet" type = "text/css" href="homepage.css">
         <title> Welcome To Bill-t Differently</title>
+        <script defer>
+            // Your redirection functions here
+        
+            // Typewriter initialization
+            document.addEventListener('DOMContentLoaded', function () {
+                // Get the typewriter element
+                var typewriterElement = document.querySelector('.typewriter .sentence');
+        
+                // Add the 'typing' animation class
+                typewriterElement.classList.add('typing');
+            });
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1 class="intro">Welcome To Bill-t Differently</h1>
-        <div class = "buttons">
-        <button onclick="redirectGetStarted()">Get Started</button>
-        <button onclick="redirectInfoPage()">What is a Proposition</button>
-        <button onclick="redirectLetterPage()">Write a Letter</button>
+        <div class = "everything">
+            <h1 class="intro">Welcome To Bill-t Differently</h1> 
+                <div class="imageContainer">
+                    <div class = "buttons">
+                        <button onclick="redirectGetStarted()">Get Started</button>
+                        <button onclick="redirectInfoPage()">What is a Proposition</button>
+                        <button onclick="redirectLetterPage()">Write a Letter</button>
+                    </div>
+                    <img class = "scroll" src="https://www.freeiconspng.com/uploads/scroll-background-png-8.png">
+                    <img class = "voted" src="https://blogs.sas.com/content/sastraining/files/2018/11/i_voted-3.png">
+                    <a class="pelican" href="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRMg9PR0Nmw75zSrdO1xFkX7qETlauVX46vI_oF3m_jEOy7mClZW_nxmKP7QKU-EJhBEpnnTu68rzIzXIlT6CMzzwYh=s1600?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRMg9PR0Nmw75zSrdO1xFkX7qETlauVX46vI_oF3m_jEOy7mClZW_nxmKP7QKU-EJhBEpnnTu68rzIzXIlT6CMzzwYh=s1600" /> </a>
+                       
+                
+                <div class="pcb-text">
+                    <div class="text-center">
+                      <p>Ready to make a change?</p>
+                    </div>
+                </div>
+                
         </div>
-        <img class = "pelican" src="https://i.pinimg.com/originals/0a/46/12/0a4612a9f4dd84ec6eda99cee3954062.jpg"
-        alt="Pelican Voting Guy"/>
-
+        
 
 
 
@@ -32,5 +59,4 @@
             }
         </script>
     </body>
-</body>
 </html>
