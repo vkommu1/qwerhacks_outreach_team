@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat with Bill</title>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="chat_test.css">
+    <script defer>
+        // Your redirection functions here
+    
+        // Typewriter initialization
+            document.addEventListener('DOMContentLoaded', function () {
+            // Get the typewriter element
+            var typewriterElement = document.querySelector('.typewriter .sentence');
+    
+            // Add the 'typing' animation class
+            typewriterElement.classList.add('typing');
+        });
+    </script>
 </head>
 <body>
     <script>
@@ -15,22 +28,50 @@
      <div id = "nav-placeholder"> 
      </div>
     <div>
-        <label for="user-prompt">Enter your prompt:</label>
-        <input type="text" id="user-prompt" placeholder="Type your prompt here">
-        <button id="generate-button">Talk to Bill</button>
+        <img class="bill1" src="./images/5b940cd2-00ec-4717-a7fc-e056ff3c8000 2.png" alt="Image">
+        <img class="bill" src="./images/5b940cd2-00ec-4717-a7fc-e056ff3c8000 2.png" alt="Image">
+    <div class = "user-prompts">
+        <label for="user-prompt">Chat with world-famous pelican Bill-T:</label>
+        <br></br>
+        <input class="type-here" type="text" id="user-prompt" placeholder="Type your prompt here">
+        <button class="talk" id="generate-button">Talk to Bill</button>
     </div>
-    <div id="response-container">
-        <!-- Display the Response Here -->
+    <div class="response-container">
+        <div class="messages" id="response-messages">
+            <!-- Display the Response Here -->
+        </div>
     </div>
-
+    <div class = "rectangle"></div>
+    <div>
     <script>
+            function animateTyping(text, element) {
+    element.textContent = '';
+    let index = 0;
+    const lineLength = 30; // Adjust as needed
+    let lines = [''];
+
+    const typingInterval = setInterval(function () {
+        if (index % lineLength === 0 && index > 0) {
+            lines.push(''); // Start a new line
+        }
+
+        if (index < text.length) {
+            lines[lines.length - 1] += text[index];
+            element.textContent = lines.join('\n');
+            index++;
+        } else {
+            clearInterval(typingInterval);
+        }
+    }, 10); // Adjust the speed as needed
+}
+
         document.addEventListener("DOMContentLoaded", function () {
-        const apiKey = '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'; 
+        const apiKey = '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'; 
         const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
         const generateButton = document.getElementById('generate-button');
         const userPromptInput = document.getElementById('user-prompt');
-        const responseContainer = document.getElementById('response-container');
+        const responseContainer = document.getElementById('response-messages');
 
         generateButton.addEventListener('click', function () {
             const userPrompt = userPromptInput.value;
@@ -67,7 +108,7 @@
                 if (data.choices && data.choices.length > 0) {
                     const gpt3Response = data.choices[0].message.content;
                     console.log(gpt3Response)
-                    responseContainer.innerHTML = `<p><strong>Bill Says!</strong></p><p>${gpt3Response}</p>`;
+                    animateTyping(gpt3Response, responseContainer);
                 } else {
                     throw new Error('Empty response from Bill');
                 }
@@ -78,8 +119,6 @@
             });
         });
     });
-
-
     </script>
 </body>
 </html>

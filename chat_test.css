@@ -1,0 +1,111 @@
+.user-prompts{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    text-align:center;
+    -webkit-text-stroke: 2px #E5AA92;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 30px;
+    line-height: 75px;
+
+    color: #f9d7c1;
+    font-size: 60px;
+    font-family:"Poppins", sans-serif;
+    font-weight: 800;
+}
+
+.type-here
+{
+    font-size: 15px;
+    padding: 10px 60px;
+
+}
+
+body{
+    background-color: #f1f1e5;;
+}
+
+.talk
+{
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    text-transform: lowercase;
+    color: black;
+    background-color: white;
+    margin-right: 5%;
+
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bill
+{
+    display: inline-block;
+    float: right;
+}
+
+.bill1
+{
+    display:inline-block;
+    float: left;
+}
+
+.messages
+{
+    
+    position: absolute;
+    vertical-align: bottom;
+    margin-left: 150px;
+    margin-top: 450px;
+
+    font-family: Poppins;
+    font-size: small;
+    z-index: 2;
+
+    white-space:normal;
+    overflow-x: auto;
+}
+
+.response-container .messages {
+    animation: typing 5s steps(50), blink-caret 1s step-end infinite;
+    animation-iteration-count: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 550px;
+    border-right: .12em solid;
+}
+
+.rectangle{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    bottom: 15px;
+    vertical-align: bottom;
+    margin-left: 35%;
+    background:#ffffff;
+    z-index: 1;
+}
+
+
+@keyframes typing {
+    0% { 
+    width: 0; 
+    }
+    to { 
+    width: 100%; 
+    }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #CD1B2C }
+}
