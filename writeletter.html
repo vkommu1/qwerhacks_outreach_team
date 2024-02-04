@@ -1,22 +1,127 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    </head>
-
-    <body>
-        <div id = "nav-placeholder">    
-        </div>
-        <script>
-           $(function(){
+<head>
+    <link rel="stylesheet" type="text/css" href="writeletter.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <script>
+        $(function () {
             $("#nav-placeholder").load("directory.html");
-           })
-        </script>
+        })
+    </script>
 
+    <div class="contents">
+        <br>
+        <p>We've made it super easy. Just enter your information below, then click the button to generate a personalized script!</p>
 
-        <div class = "contents">
-        <h1>Include Sneha Code to write letter</h1>
+        <div class="scriptQues">
+            <div class="scriptItem">
+                <label for="yourName">Your First Name: </label>
+                <input type="text" id="name">
+            </div>
+
+            <div class="dropdown">
+                <button id="templateDropdownBtn" class="dropbtn">Select a Template</button>
+                <div class="dropdown-content">
+                    <a href="#" id="templateOption1">Proposition 1</a>
+                    <a href="#" id="templateOption2">Proposition 2</a>
+                    <a href="#" id="templateOption3">Proposition 3</a>
+                    <a href="#" id="templateOption4">Proposition 4</a>
+                    <a href="#" id="templateOption5">Proposition 5</a>
+                    <a href="#" id="templateOption6">Proposition 6</a>
+                </div>
+            </div>
+
+            <div class="scriptItem">
+                <label for="yourLocation">Your District, County, or City: </label>
+                <input type="text" id="location">
+            </div>
+
+            <div class="scriptItem">
+                <label for="yourLearning">Share 1-2 impacts of this decision or your opinion on the topic: </label>
+                <br />
+                <input type="text" id="learning">
+            </div>
+
+            <button id="scriptBtn">Generate Script</button>
         </div>
-    </body>
 
+        <br />
+
+        <p id="scriptReturned"></p>
+        <br />
+    </div>
+
+    <script>
+        var displayScript = document.getElementById("scriptReturned");
+        var scriptBtn = document.getElementById("scriptBtn");
+        var templateDropdownBtn = document.getElementById("templateDropdownBtn");
+
+        if (scriptBtn) {
+            scriptBtn.addEventListener("click", generateScript);
+        }
+
+        // Function to generate scripts based on the selected template
+        function generateScript() {
+            var name = document.getElementById("name").value;
+            var location = document.getElementById("location").value;
+            var learning = document.getElementById("learning").value;
+            var selectedTemplate = templateDropdownBtn.textContent;
+
+            // Create an object to map templates to script content
+            var scriptTemplates = {
+                "Proposition 1": "Template 1 content: " + name + ", " + location + ", " + learning,
+                "Proposition 2": "Template 2 content: " + name + ", " + location + ", " + learning,
+                "Proposition 3": "Template 3 content: " + name + ", " + location + ", " + learning,
+                "Proposition 4": "Template 4 content: " + name + ", " + location + ", " + learning,
+                "Proposition 5": "Template 5 content: " + name + ", " + location + ", " + learning,
+                "Proposition 6": "Template 6 content: " + name + ", " + location + ", " + learning,
+            };
+
+            // Display the generated script based on the selected template
+            if (selectedTemplate in scriptTemplates) {
+                displayScript.textContent = scriptTemplates[selectedTemplate];
+                const generatedScript = scriptTemplates[selectedTemplate];
+                const generatedSubject = selectedTemplate;
+                const mailtoWhere = `mailto:?subject=${encodeURIComponent(generatedSubject)} Opinion &body=${encodeURIComponent(generatedScript)}`;
+
+                window.location.href = mailtoWhere;
+
+            } else {
+                displayScript.textContent = "Selected template not found.";
+            }
+        }
+
+        // Add event listeners to dynamically change the selected template
+        var templateOption1 = document.getElementById("templateOption1");
+        var templateOption2 = document.getElementById("templateOption2");
+        var templateOption3 = document.getElementById("templateOption3");
+
+        templateOption1.addEventListener("click", function () {
+            templateDropdownBtn.textContent = "Proposition 1";
+        });
+
+        templateOption2.addEventListener("click", function () {
+            templateDropdownBtn.textContent = "Proposition 2";
+        });
+
+        templateOption3.addEventListener("click", function () {
+            templateDropdownBtn.textContent = "Proposition 3";
+        });
+
+        templateOption4.addEventListener("click", function () {
+            templateDropdownBtn.textContent = "Proposition 4";
+        });
+
+        templateOption5.addEventListener("click", function () {
+            templateDropdownBtn.textContent = "Proposition 5";
+        });
+
+        templateOption6.addEventListener("click", function () {
+            templateDropdownBtn.textContent = "Proposition 6";
+        });
+    </script>
+</body>
 </html>

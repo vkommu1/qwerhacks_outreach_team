@@ -1,42 +1,27 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        
-    </head>
-
-    <body>
-        <div id = "content">
-        <div class = "buttons">
-            <button onclick="redirectHome()"> Home</button>
-            <button onclick="redirectGetStarted()"> Propositions</button>
-            <button onclick="redirectInfoPage()"> Info</button>
-            <button onclick="redirectLetterPage()"> Email</button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="directory.css">
+    <title>Navigation Bar</title>
+</head>
+<body>
+    <div id="unique-container">
+        <div class="navbar">
+            <div class="buttons">
+                <button onclick="redirect('homepage.html')">Home</button>
+                <button onclick="redirect('proposition.html')">Propositions</button>
+                <button onclick="redirect('propositionfaq.html')">Info</button>
+                <button onclick="redirect('writeletter.html')">Email</button>
+            </div>
         </div>
-        
+    </div>
 
-
-
-
-        <script>
-            function redirectHome()
-            {
-                window.location.href = 'homepage.html';
-            }
-            function redirectGetStarted()
-            {
-                window.location.href = 'proposition.html';
-            }
-            function redirectInfoPage()
-            {
-                window.location.href = 'propositionfaq.html';
-            }
-            function redirectLetterPage()
-            {
-                window.location.href = 'writeletter.html';
-            }
-        </script>
-        </div>
-    </body>
-
-
+    <script>
+        function redirect(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
 </html>
