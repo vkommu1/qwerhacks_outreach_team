@@ -61,7 +61,7 @@
 }
 
 .buttons {
-    font-family: 'Brush Script MT';
+    font-family: 'Koulen';
     font-weight: bold;
     font-size: 25px;
     cursor: pointer;
@@ -80,7 +80,7 @@ button {
     transition-duration: 0.4s;
     margin: auto;
     position: absolute; /* set button to an absolute position */
-    font-family: 'Apple Chancery';
+    font-family: 'Koulen';
     font-weight: bold;
     color: #3d468A;
     font-size: 25px;
@@ -95,7 +95,7 @@ button {
 button:hover {
     margin: auto;
     position: absolute; /* set button to an absolute position */
-    font-family: 'Apple Chancery';
+    font-family: 'Koulen';
     font-weight: bold;
     color: #3d468A;
     font-size: 25px;
@@ -122,7 +122,7 @@ button:hover {
   
 .pcb-text p {
     font-size: 60px;
-    font-family: 'Luminari';
+    font-family: 'Koulen';
     font-weight: bold;
     color: #CD1B2C;
     animation: typing 5s steps(50), blink-caret 1s step-end infinite;
