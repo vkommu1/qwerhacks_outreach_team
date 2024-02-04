@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPT-3 Email Prompt</title>
+    <title>Chat with Bill</title>
 </head>
 <body>
     <div>
         <label for="user-prompt">Enter your prompt:</label>
         <input type="text" id="user-prompt" placeholder="Type your prompt here">
-        <button id="generate-button">Generate</button>
+        <button id="generate-button">Talk to Bill</button>
     </div>
     <div id="response-container">
         <!-- Display the Response Here -->
@@ -17,7 +17,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-        const apiKey = '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'; // Replace with your actual GPT-3 API key
+        const apiKey = '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'; 
         const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
         const generateButton = document.getElementById('generate-button');
@@ -27,7 +27,7 @@
         generateButton.addEventListener('click', function () {
             const userPrompt = userPromptInput.value;
 
-            // Send a request to GPT-3
+
             fetch(apiUrl, {
                 method: 'POST',
                 headers: {
@@ -39,7 +39,7 @@
                     "messages": [
                     {
                         "role": "system",
-                        "content": "You are a helpful assistant at writing emails to legislatures."
+                        "content": "You are a helpful pelican who is knowledgable about the government."
                     },
                     {
                         "role": "user",
@@ -59,9 +59,9 @@
                 if (data.choices && data.choices.length > 0) {
                     const gpt3Response = data.choices[0].message.content;
                     console.log(gpt3Response)
-                    responseContainer.innerHTML = `<p><strong>GPT-3 Response:</strong></p><p>${gpt3Response}</p>`;
+                    responseContainer.innerHTML = `<p><strong>Bill Says!</strong></p><p>${gpt3Response}</p>`;
                 } else {
-                    throw new Error('Empty response from GPT-3');
+                    throw new Error('Empty response from Bill');
                 }
             })
             .catch(error => {
