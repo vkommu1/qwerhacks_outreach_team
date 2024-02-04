@@ -22,6 +22,12 @@ box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
 
+.vote_button_pro:hover {
+    transform: scale(3.8); /* Scale the circle on hover */
+    background: #FF3737;
+    z-index: 1; 
+}
+
 .text_pro
 {
 /* Pros */
@@ -41,6 +47,10 @@ text-align: center;
 color: #FF3737;
 }
 
+.vote_button_pro:hover .text_pro {
+    opacity: 0; /* Hide the text on hover */
+}
+
 .vote_button_con
 {
 /* Ellipse 20 */
@@ -57,6 +67,16 @@ top: 232px;
 background: linear-gradient(180deg, #FF3737 35.06%, rgba(255, 55, 55, 0) 35.07%), linear-gradient(180deg, #FFFFFF 66.51%, rgba(255, 255, 255, 0) 66.52%), #044389;
 border: 1px solid #000000;
 box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.vote_button_con:hover {
+    transform: scale(3.8); /* Scale the circle on hover */
+    background: #FFFFFF;
+    z-index: 1; 
+}
+
+.vote_button_con:hover .text_con {
+    opacity: 0; /* Hide the text on hover */
 }
 
 .text_con
@@ -95,7 +115,13 @@ top: 200px;
 background: linear-gradient(180deg, #FF3737 35.06%, rgba(255, 55, 55, 0) 35.07%), linear-gradient(180deg, #FFFFFF 66.51%, rgba(255, 255, 255, 0) 66.52%), #044389;
 border: 1px solid #000000;
 box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
+.vote_button_info:hover
+{
+    transform: scale(3.8); /* Scale the circle on hover */
+    background: #044389;
+    z-index: 1; 
 }
 
 .text_info_points
@@ -138,11 +164,21 @@ text-align: center;
 color: #FFFFFF;
 }
 
+.vote_button_info:hover .text_info_main {
+    opacity: 0; /* Hide the text on hover */
+}
+
+.vote_button_info:hover .text_info_points {
+    opacity: 0; /* Hide the text on hover */
+}
+
 .koulen-regular {
     font-family: "Koulen", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
+
+
 
 .bill 
 {
@@ -153,5 +189,13 @@ width: 400px;
 height: 400px;
 left: 500px;
 top: 400px;
-
+z-index: 1; 
 }
+
+
+
+
+
+
+
+
