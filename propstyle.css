@@ -33,9 +33,9 @@ box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 /* Pros */
 
 width: 160px;
-height: 72px;
-left: 347px;
-top: 290px;
+height: 65px;
+left: 291px;
+top: 300px;
 
 font-family: 'Koulen';
 font-style: normal;
@@ -128,7 +128,7 @@ box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 {
 /* Points */
 width: 160px;
-height: 162px;
+height: 80px; 
 left: 690px;
 top: 210px;
 
@@ -184,14 +184,78 @@ color: #FFFFFF;
 {
 /* 5b940cd2-00ec-4717-a7fc-e056ff3c8000 2 */
 
-position: absolute;
+position: relative;
 width: 400px;
 height: 400px;
-left: 500px;
-top: 400px;
+left: -150px;
+top: 50px;
 z-index: 1; 
 }
 
+.vote_button_info:hover .text_info_list
+{
+position: relative;
+font-family: 'Koulen';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+text-align: center;
+
+opacity: 1;
+    
+color: #FFFFFF;
+z-index: 10000; 
+
+}
+
+.vote_button_pro:hover .text_pro_list
+{
+    position: relative;
+font-family: 'Koulen';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+text-align: center;
+
+opacity: 1;
+
+color: #044389;
+}
+
+.vote_button_con:hover .text_con_list
+{
+    position: relative;
+    font-family: 'Koulen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+
+opacity: 1;
+
+color: #044389;
+}
+
+.text_con_list
+{
+    opacity: 0;
+}
+.text_pro_list
+{
+    opacity: 0;
+}
+.text_info_list
+{
+    opacity: 0;
+}
+
+
+.vote_button_info:hover .bill {
+    transform: translateY(20px); /* Move the image down by 20 pixels on hover */
+}
 
 
 
