@@ -1,24 +1,45 @@
 <!DOCTYPE html>
+
 <html>
     <head>
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <!-- link the webpage's stylesheet -->
+      <link rel="stylesheet" href="propstyle.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&display=swap" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
-
+    
     <body>
-        <div id = "nav-placeholder">    
-        </div>
+        
         <script>
            $(function(){
             $("#nav-placeholder").load("directory.html");
            })
         </script>
-        <div class = "contents">
-            <h1 class = "title">Proposition 1</h1>
-            <h2 class = "about_header">What is Proposition 1?</h2>
-            <h3 class = "description">Proposition 1 is about...</h3>
-            <h2 class = "pros_header">Pros and Cons</h2>
-            <h3 class = "pros_and_cons">Pros of Proposition 1 include...</h3>
+        <div id = "nav-placeholder"> 
         </div>
+
+
+        <div class = "title_nav">Prop 1</div>
+        
+        <button class = "vote_button_pro">
+          <div class = "text_pro">Pros</div>
+          <div class = "text_pro_list">bill</div>
+        </button>
+
+        <button class = "vote_button_con" >
+          <div class = "text_con">Cons</div>
+          <div class = "text_con_list">bill</div>
+        </button>
+
+        <button class = "vote_button_info" >
+          <div class = "text_info_main">Main</div>
+          <div class = "text_info_points">Points</div>
+          <div class = "text_info_list">yuh</div>
+          <img class="bill" src="./5b940cd2-00ec-4717-a7fc-e056ff3c8000 2.png" alt="Image">
+        </button>
+
+       
+
     </body>
 
 </html>
