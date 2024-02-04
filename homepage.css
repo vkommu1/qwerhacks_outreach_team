@@ -12,24 +12,25 @@
 .intro
 {
     color: black;
-    font-family: 'Brush Script MT';
-    font-size: 100px;
+    font-family: 'Anton', sans-serif;
+    font-size: 75px;
     font-weight: bold;
     text-align: center;
 }
 
 
 .scroll {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
     display: block;
-    margin-left: auto;
+    margin: 0 auto;
+    /*margin-left: auto;
     margin-right: auto;
-    margin-top: 0;
+    margin-top: 0;*/
 }
 
-.voted {
-    max-width: 15%;
+.pelican {
+    max-width: 1%;
     height: auto;
     display: block;
     margin-left: auto;
@@ -40,7 +41,23 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding-bottom: 415px;
+    padding-bottom: 325px;
+} 
+
+
+.voted {
+    max-width: 8%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 325px;
 }
 
 .buttons {
@@ -60,12 +77,13 @@
 }
 
 button {
+    transition-duration: 0.4s;
     margin: auto;
     position: absolute; /* set button to an absolute position */
     font-family: 'Apple Chancery';
     font-weight: bold;
     color: #3d468A;
-    font-size: 32px;
+    font-size: 25px;
     border-color: #980B29;
     background-color: white;
     border-radius: 100px;
@@ -74,7 +92,62 @@ button {
     z-index: 2;
 }
 
+button:hover {
+    margin: auto;
+    position: absolute; /* set button to an absolute position */
+    font-family: 'Apple Chancery';
+    font-weight: bold;
+    color: #3d468A;
+    font-size: 25px;
+    border-color: #980B29;
+    background-color: #EDB8D0;
+    border-radius: 100px;
+    position: relative;
+    margin-top: 1 px;
+    z-index: 2;
+}
 
-/*    background-color: rgb(250, 151, 146);
-      box-shadow: 5px 5px #999;   */
+.pcb-text {
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;*/
+
+}
+  
+.pcb-text p {
+    font-size: 60px;
+    font-family: 'Luminari';
+    font-weight: bold;
+    color: #CD1B2C;
+    animation: typing 5s steps(50), blink-caret 1s step-end infinite;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    border-right: .12em solid #CD1B2C;
+    /*margin-top: -1200px;*/
+}
+  
+
+
+  
+@keyframes typing {
+    from { 
+    width: 0; 
+    }
+    to { 
+    width: 100%; 
+    }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #CD1B2C }
+}
 
