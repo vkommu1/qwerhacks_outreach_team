@@ -43,17 +43,18 @@
                     <br />
                     <input type="text" id="learning">
                 </div>
-                <button id="scriptBtn">Generate Script</button>
+                <button class ="scriptButton" id="scriptBtn">Generate Script</button>
+
+                <p id="scriptReturned"></p>
             </div>
         </div>
 
         <br />
 
-        <p id="scriptReturned"></p>
         <br />
     </div>
-
-    <script class = "script-return">
+    <div class = "script-return">
+    <script>
         var displayScript = document.getElementById("scriptReturned");
         var scriptBtn = document.getElementById("scriptBtn");
         var templateDropdownBtn = document.getElementById("templateDropdownBtn");
@@ -122,5 +123,6 @@
             templateDropdownBtn.textContent = "Proposition 6";
         });
     </script>
+    </div>
 </body class = "whole-body">
 </html>
