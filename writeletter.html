@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="writeletter.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
-<body>
+<body class = "whole-body">
     <div id="nav-placeholder"></div>
     <script>
         $(function () {
@@ -14,14 +14,8 @@
 
     <div class="contents">
         <br>
-        <p>We've made it super easy. Just enter your information below, then click the button to generate a personalized script!</p>
-
+        <p class = "opener">We've made it super easy. Just enter your information below, then click the button to generate a personalized email script!</p>
         <div class="scriptQues">
-            <div class="scriptItem">
-                <label for="yourName">Your First Name: </label>
-                <input type="text" id="name">
-            </div>
-
             <div class="dropdown">
                 <button id="templateDropdownBtn" class="dropbtn">Select a Template</button>
                 <div class="dropdown-content">
@@ -33,19 +27,24 @@
                     <a href="#" id="templateOption6">Proposition 6</a>
                 </div>
             </div>
+            <div class = "personalInfo">
+                <div class="scriptItem">
+                    <label for="yourName">Your First Name: </label>
+                    <input type="text" id="name">
+                </div>
 
-            <div class="scriptItem">
-                <label for="yourLocation">Your District, County, or City: </label>
-                <input type="text" id="location">
+                <div class="scriptItem">
+                    <label for="yourLocation">Your District, County, or City: </label>
+                    <input type="text" id="location">
+                </div>
+
+                <div class="scriptItem">
+                    <label for="yourLearning">Share 1-2 impacts of this decision or your opinion on the topic: </label>
+                    <br />
+                    <input type="text" id="learning">
+                </div>
+                <button id="scriptBtn">Generate Script</button>
             </div>
-
-            <div class="scriptItem">
-                <label for="yourLearning">Share 1-2 impacts of this decision or your opinion on the topic: </label>
-                <br />
-                <input type="text" id="learning">
-            </div>
-
-            <button id="scriptBtn">Generate Script</button>
         </div>
 
         <br />
@@ -54,7 +53,7 @@
         <br />
     </div>
 
-    <script>
+    <script class = "script-return">
         var displayScript = document.getElementById("scriptReturned");
         var scriptBtn = document.getElementById("scriptBtn");
         var templateDropdownBtn = document.getElementById("templateDropdownBtn");
@@ -123,5 +122,5 @@
             templateDropdownBtn.textContent = "Proposition 6";
         });
     </script>
-</body>
+</body class = "whole-body">
 </html>
