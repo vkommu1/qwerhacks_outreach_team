@@ -1,0 +1,134 @@
+/*.everything{
+    position:fixed;
+}
+
+.heading{
+    color: #980B29;
+    font-family: 'Anton', sans-serif;
+    font-size: 75px;
+    padding-left: 50px;
+    text-align: center;
+}
+.propositionDef{
+    color: black;
+    font-size: 30px;
+    white-space: nowrap;
+}
+
+.proposition{
+    position: relative;
+    text-align: center;
+    line-height: 0em;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 3px dotted black;
+    color: #3D469A;
+    font-size: 40px; 
+    float:left; 
+    margin-left: 500px;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    font-size: 20px;
+    width: 750px;
+    background-color: #3D469A;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip2 {
+    position: relative;
+    display: inline-block;
+    border-bottom: 3px dotted black;
+    color: #3D469A;
+    font-size: 40px;
+    float:right;
+  }
+  
+.tooltip2 .tooltiptext2 {
+    visibility: hidden;
+    font-size: 20px;
+    width: 750px;
+    background-color: #3D469A;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip2:hover .tooltiptext2 {
+    visibility: visible;
+}
+
+.orAsAn{
+    text-align: center;
+} 
+*/
+
+body {
+    font-family: 'Anton', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#nav-placeholder {
+    display: inline;
+}
+
+.heading {
+    text-align: center;
+    color: #980B29;
+    font-size: 60px;
+}
+
+.propositionDef {
+    display: inline;
+}
+
+.proposition,
+.orAsAn {
+    display: inline;
+    margin: 0 5px; /* Adjust as needed for spacing */
+}
+
+.tooltip,
+.tooltip2 {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltiptext,
+.tooltiptext2 {
+    display: none;
+    
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip2:hover .tooltiptext2 {
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 5px;
+    z-index: 1;
+}
+
+
+
+
+

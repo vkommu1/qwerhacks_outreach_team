@@ -1,10 +1,20 @@
-<!DOCTYPE html>
+<!--!DOCTYPE html>
 <html>
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" href="/propositionfaq.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        
+        <style>
+            .propositionDef {
+                display:inline;
+            }
+        </style>
     </head>
 
-    <body>
+    <body class="everything">
         <div id = "nav-placeholder">    
         </div>
         <script>
@@ -13,8 +23,160 @@
            })
         </script>
 
-        <h1>This is what a proposition is</h1>
-        <h2>blah blah</h2>
+        <h1 class="heading">What is a proposition?</h1>
+        <div class="propositionDef">
+            <h2 class="proposition">A proposition is proposed legislation that begins as a</h2>
+                <span class="tooltip">referendum<span class="tooltiptext">direct vote in which voters can vote to either accept or reject a proposal, law, or constitutional amendment</span></span>
+            <h2 class="orAsAn"> or as an </h2>
+                <span class="tooltip2">initiative<span class="tooltiptext2">a process in which voters can vote to placed proposed laws or amendments on the ballot through a petition for direct public voting</span></span>
+        </div>
     </body>
+
+</html--> 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="/propositionfaq.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    
+
+    <style>
+        body {
+            display: inline;
+            font-family: 'Anton', sans-serif;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            background-color: #f1f1e5;
+        }
+
+        #nav-placeholder {
+            display: inline;
+        }
+
+        .propositionDef {
+            display: inline;
+        }
+
+        .proposition{
+            display: inline;
+            text-align: center;
+            padding-left: 215px;
+            font-size: 32px;
+        }
+
+        .orAsAn {
+            display: inline;
+            font-size: 32px;
+        }
+
+        .tooltip,
+        .tooltip2 {
+            display: inline-block;
+            position: relative;
+            font-size: 32px;
+            border-bottom: 3px dotted black;
+            color: #3D469A;
+
+        }
+
+        .tooltiptext,
+        .tooltiptext2 {
+            display: none;
+        }
+
+        .tooltip:hover .tooltiptext{
+            display: inline-block;
+            position: absolute;
+            background-color: white;
+            border: 2px solid black;
+            padding: 5px;
+            z-index: 1;
+            margin-top: 10px;
+            width: 450px;
+            font-size: 15px;
+            left: -160px;
+            top: 35px;
+        }
+        .tooltip2:hover .tooltiptext2 {
+            display: inline-block;
+            position: absolute;
+            background-color: white;
+            border: 2px solid black;
+            padding: 5px;
+            z-index: 1;
+            margin-top: 10px;
+            width: 450px;
+            font-size: 15px;
+            left: -180px;
+            top: 35px;
+        }
+        .firstLine{
+            padding-top: 40px;
+            text-align: center;
+        }
+        .secondLine{
+            text-align: center;
+        }
+        .thirdLine{
+            text-align: center;
+        }
+        .fourthLine{
+            padding-top: 25px;
+            text-align: left;
+            padding-left: 250px;
+            font-size: 35px;
+        }
+
+        .voted {
+            width: 12%;
+            position: absolute;
+            width: 179px;
+            height: 183px;
+            left: 1060px;
+            top: 495px;
+
+        }
+
+        .voted:hover {
+             transform: scale(1.1);
+            z-index: 1;
+        }
+
+
+    </style>
+</head>
+
+<body class="everything">
+    <div id="nav-placeholder"></div>
+    <script>
+        $(function(){
+            $("#nav-placeholder").load("directory.html");
+        })
+    </script>
+    <button onclick = redirectToSite()>
+        <img class = "voted" src="https://www.morriscountyclerk.org/files/sharedassets/clerk/v/1/images/vote-button.png?w=1080">
+    </button>
+    <script>
+        function redirectToSite(){
+            window.location.href = "https://www.sos.ca.gov/elections/voter-registration";
+        }
+    </script>
+
+    <h1 class="heading">What is a proposition?</h1>
+    <div class="propositionDef">
+        <h2 class="proposition">A proposition is proposed legislation that begins as a</h2>
+        <span class="tooltip">referendum<span class="tooltiptext">direct vote in which voters can vote to either accept or reject a proposal, law, or constitutional amendment</span></span>
+        <h2 class="orAsAn"> or as an </h2>
+        <span class="tooltip2">initiative.<span class="tooltiptext2">a process in which voters can vote to placed proposed laws or amendments on the ballot through a petition for direct public voting</span></span>
+        <h2 class="firstLine">It becomes a proposition once it receives enough signatories to be eligible for the ballot.</h2>
+        <h2 class="secondLine">Citizens can then vote "yes" or "no" to each proposition.</h2>
+        <h2 class="thirdLine">If it passes, it becomes part of the state constitution or statute.</h2>
+        <h2 class="fourthLine">Get involved today by visiting the voter registration site!</h2>
+    </div>
+</body>
 
 </html>
